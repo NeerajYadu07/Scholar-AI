@@ -1,3 +1,4 @@
+'use client'
 import { z } from 'zod'
 import { schemaDoubt } from './schemas'
 import { useForm } from 'react-hook-form'

@@ -1,3 +1,4 @@
+'use client'
 import { z } from 'zod'
 import { FormProvider, useForm, useFormContext } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
