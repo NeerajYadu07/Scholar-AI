@@ -348,7 +348,7 @@ export const AddQuestion = ({ chapterIndex }: { chapterIndex: number }) => {
             <AccordionContent>
               <div className={`flex justify-end my-2`}>
                 <Button
-                  variant={'ghost'}
+                  variant={'destructive'}
                   className="text-xs text-gray-600 underline underline-offset-2"
                   onClick={() => {
                     remove(questionIndex)

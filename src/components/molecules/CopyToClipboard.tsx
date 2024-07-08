@@ -18,7 +18,7 @@ export const CopyToClipboard: React.FC<CopyToClipboardProps> = ({ text }) => {
   }
 
   return (
-    <div className="flex items-center justify-between px-3 py-2 space-x-2 bg-gray-200 border rounded shadow-inner">
+    <div className="flex items-center justify-between px-3 py-2 space-x-2 bg-gray-200 border rounded shadow-inner dark:text-black">
       <span>{text}</span>
       <button
         onClick={handleCopyClick}

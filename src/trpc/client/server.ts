@@ -1,20 +1,27 @@
 import 'server-only'
 
-import { headers } from 'next/headers'
+import { cookies, headers } from 'next/headers'
 import { createTRPCContext } from '../server'
 import { TRPCClientError, createTRPCProxyClient } from '@trpc/client'
-import { AppRouter, appRouter } from '../server/routers'
+import { type AppRouter, appRouter } from '../server/routers'
 import { type TRPCErrorResponse } from '@trpc/server/rpc'
+import { NextRequest } from 'next/server'
+import { getAuth } from '@clerk/nextjs/server'
 
 import { observable } from '@trpc/server/observable'
 import { callProcedure } from '@trpc/server'
 import { cache } from 'react'
+import { getBaseUrl } from './shared'
 
 const createContext = cache(() => {
-  const heads = new Headers(headers())
-  heads.set('x-trpc-source', 'rsc')
-
-  return createTRPCContext({ headers: heads })
+  const url = getBaseUrl()
+  return createTRPCContext({
+    headers: new Headers({
+      cookie: cookies().toString(),
+      'x-trpc-source': 'rsc',
+    }),
+    auth: getAuth(new NextRequest(url, { headers: headers() })),
+  })
 })
 
 export const trpcServer = createTRPCProxyClient<AppRouter>({

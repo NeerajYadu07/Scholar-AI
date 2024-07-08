@@ -18,7 +18,7 @@ export default async function Page({ params }: { params: { id: string } }) {
   }
 
   return (
-    <div className="mt-12 max-w-2xl mx-auto border bg-gray-100 p-4 rounded-lg">
+    <div className="mt-12 max-w-2xl mx-auto border bg-gray-100 p-4 rounded-lg dark:bg-slate-500">
       <div className="flex justify-center mb-6 items-start gap-2">
         <div>
           <div>

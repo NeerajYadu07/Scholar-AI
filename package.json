@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@clerk/nextjs": "^5.1.6",
+    "@clerk/nextjs": "^4.29.9",
     "@hookform/resolvers": "^3.6.0",
     "@prisma/client": "^5.16.0",
     "@radix-ui/react-accordion": "^1.2.0",
@@ -26,7 +26,6 @@
     "@trpc/server": "^10.45.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
-    "data-fns": "^1.1.0",
     "date-fns": "^3.6.0",
     "groq-sdk": "^0.5.0",
     "lucide-react": "^0.397.0",

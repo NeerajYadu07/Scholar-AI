@@ -44,7 +44,7 @@ export const Test = ({
     })
 
   return (
-    <form
+    <form 
       onSubmit={handleSubmit(async ({ answers, testId }) => {
         await submitTest({ answers, testId })
       })}

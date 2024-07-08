@@ -1,13 +1,19 @@
 import { Role } from '@/util/types'
-import { auth } from '@clerk/nextjs/server'
+// import { auth } from '@clerk/nextjs/server'
 import { TRPCError, initTRPC } from '@trpc/server'
 import { authorizeUser } from './util'
 import { prisma } from '@/db'
 // import { AIService } from '@/ai/ai.service'
 import { AIService } from '@/ai/groq.ai.service'
 
-export const createTRPCContext = async (opts: { headers: Headers }) => {
-  const session = auth()
+import { getAuth } from '@clerk/nextjs/server'
+type AuthObject = ReturnType<typeof getAuth>
+
+export const createTRPCContext = async (opts: {
+  headers: Headers
+  auth: AuthObject
+}) => {
+  const session = opts.auth
   const ai = new AIService()
 
   return {
@@ -35,4 +41,3 @@ export const protectedProcedure = (...roles: Role[]) =>
 
     return next({ ctx: { ...ctx, userId: ctx.session.userId } })
   })
-

@@ -1,4 +1,3 @@
-"use client"
 import { z } from 'zod'
 import { schemaPayment } from './schemas'
 import { useForm } from 'react-hook-form'
