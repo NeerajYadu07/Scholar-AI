@@ -1,7 +1,7 @@
 import { AlertBox } from '@/components/molecules/AlertBox'
 import { CourseSidebar } from '@/components/organisms/CourseSidebar'
 import { StickyLayout } from '@/components/organisms/StickyLayout'
-import { trpcServer } from '@/trpc/clients/server'
+import { trpcServer } from '@/trpc/client/server'
 
 export default async function Layout({
   children,
@@ -23,11 +23,7 @@ export default async function Layout({
   }
 
   return (
-    <StickyLayout
-      sidebarContent={
-          <CourseSidebar course={course} />
-      }
-    >
+    <StickyLayout sidebarContent={<CourseSidebar course={course} />}>
       {children}
     </StickyLayout>
   )

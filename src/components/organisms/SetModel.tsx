@@ -1,5 +1,5 @@
 'use client'
-import { trpcClient } from '@/trpc/clients/client'
+import { trpcClient } from '@/trpc/client/client'
 import { Label } from '../atoms/label'
 import { HtmlSelect } from '../atoms/select'
 import { $Enums } from '@prisma/client'
@@ -13,7 +13,7 @@ export const SetModel = () => {
   const utils = trpcClient.useUtils()
   const { data } = trpcClient.aiModel.currentModel.useQuery()
 
-  const { mutateAsync: updateAiModel,isLoading } =
+  const { mutateAsync: updateAiModel, isLoading } =
     trpcClient.aiModel.updateCurrentModel.useMutation({
       onSuccess(data, variables, context) {
         utils.aiModel.currentModel.invalidate()
@@ -21,8 +21,8 @@ export const SetModel = () => {
       },
     })
 
-  if(isLoading){
-    return <Loading/>
+  if (isLoading) {
+    return <Loading />
   }
 
   return (

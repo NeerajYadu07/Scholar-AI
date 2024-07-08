@@ -1,10 +1,9 @@
 'use client'
 import {
   FormProviderCreateCourse,
-  FormTypeCreateCourse,
   useFormContextCreateCourse,
 } from '@/forms/createCourse'
-import { Controller, useFieldArray, useFormContext } from 'react-hook-form'
+import { Controller, useFieldArray } from 'react-hook-form'
 import { Label } from '../atoms/label'
 import { Input } from '../atoms/input'
 import { TextArea } from '../atoms/textArea'
@@ -20,7 +19,7 @@ import {
 import { Button } from '../atoms/button'
 import { Plus } from 'lucide-react'
 import { useCloudinaryUpload } from '@/util/hooks'
-import { trpcClient } from '@/trpc/clients/client'
+import { trpcClient } from '@/trpc/client/client'
 import { useToast } from '../molecules/Toaster/use-toast'
 import { useRouter } from 'next/navigation'
 import { revalidatePath } from '@/util/actions'

@@ -1,7 +1,7 @@
 'use client'
 import { useFormTest } from '@/forms/test'
-import { trpcClient } from '@/trpc/clients/client'
-import { RouterOutputs } from '@/trpc/clients/types'
+import { trpcClient } from '@/trpc/client/client'
+import { RouterOutputs } from '@/trpc/client/types'
 import { Label } from '../atoms/label'
 import { TextArea } from '../atoms/textArea'
 import { Button } from '../atoms/button'
@@ -50,7 +50,10 @@ export const Test = ({
       })}
     >
       {questions.map((question, index) => (
-        <Label key={question.id} title={`Q.${index+1} ${question.Question.question}`}>
+        <Label
+          key={question.id}
+          title={`Q.${index + 1} ${question.Question.question}`}
+        >
           <TextArea
             {...register(`answers.${index}.userAnswer`)}
             placeholder="Your answer"

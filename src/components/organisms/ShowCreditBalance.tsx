@@ -1,4 +1,4 @@
-import { trpcServer } from '@/trpc/clients/server'
+import { trpcServer } from '@/trpc/client/server'
 import { cn } from '@/util/styles'
 import { BaseComponent } from '@/util/types'
 import { AddCredits } from './AddCredits'

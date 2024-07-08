@@ -1,4 +1,4 @@
-import { RouterOutputs } from '@/trpc/clients/types'
+import { RouterOutputs } from '@/trpc/client/types'
 import { BaseComponent } from '@/util/types'
 import { AlertBox } from '../molecules/AlertBox'
 

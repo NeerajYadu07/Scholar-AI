@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { RouterOutputs } from '@/trpc/clients/types'
+import { RouterOutputs } from '@/trpc/client/types'
 import { cn } from '@/util/styles'
 
 export const CourseCard = ({

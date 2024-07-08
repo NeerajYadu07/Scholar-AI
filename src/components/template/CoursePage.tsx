@@ -1,6 +1,6 @@
 'use client'
 
-import { RouterOutputs } from '@/trpc/clients/types'
+import { RouterOutputs } from '@/trpc/client/types'
 import { DisplayDate } from '../molecules/DisplayDate'
 import Image from 'next/image'
 import { cn } from '@/util/styles'

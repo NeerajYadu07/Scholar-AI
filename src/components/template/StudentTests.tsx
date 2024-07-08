@@ -1,4 +1,5 @@
-import { RouterOutputs } from '@/trpc/clients/types'
+"use client"
+import { RouterOutputs } from '@/trpc/client/types'
 import {
   Accordion,
   AccordionContent,

@@ -11,7 +11,7 @@ import {
 } from '../atoms/table'
 import { format } from 'date-fns'
 import { cn } from '@/util/styles'
-import { trpcClient } from '@/trpc/clients/client'
+import { trpcClient } from '@/trpc/client/client'
 import { getModelName } from '@/util'
 
 export const ListTransactions = () => {
@@ -66,13 +66,13 @@ export const ListTransactions = () => {
               <TableCell
                 className={cn(
                   'text-2xl text-right',
-                  amount > 0 ? 'text-green-700' : 'text-red-700',
+                  amount > 0 ? 'text-green-700' : 'text-red-700'
                 )}
               >
                 {amount.toFixed(4)}
               </TableCell>
             </TableRow>
-          ),
+          )
         )}
       </TableBody>
     </Table>

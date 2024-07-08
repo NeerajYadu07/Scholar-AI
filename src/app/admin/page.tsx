@@ -1,5 +1,5 @@
 import { StatCard } from '@/components/molecules/StatCard'
-import { trpcServer } from '@/trpc/clients/server'
+import { trpcServer } from '@/trpc/client/server'
 import { Book, Lock, User } from 'lucide-react'
 
 export default async function Page() {

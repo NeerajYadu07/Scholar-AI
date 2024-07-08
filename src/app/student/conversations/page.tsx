@@ -1,6 +1,6 @@
 import { AlertBox } from '@/components/molecules/AlertBox'
 import { ConversationCard } from '@/components/organisms/ConversationCard'
-import { trpcServer } from '@/trpc/clients/server'
+import { trpcServer } from '@/trpc/client/server'
 
 export default async function Page() {
   const myConversations = await trpcServer.students.myConversations.query()

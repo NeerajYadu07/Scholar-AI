@@ -1,5 +1,5 @@
 'use client'
-import { RouterOutputs } from '@/trpc/clients/types'
+import { RouterOutputs } from '@/trpc/client/types'
 import { cn } from '@/util/styles'
 import Link from 'next/link'
 import { DisplayDate } from '../molecules/DisplayDate'
@@ -23,7 +23,7 @@ import {
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from '@/components/atoms/dropdown-menu'
-import { trpcClient } from '@/trpc/clients/client'
+import { trpcClient } from '@/trpc/client/client'
 import { revalidatePath } from '@/util/actions'
 import { useToast } from '../molecules/Toaster/use-toast'
 import { useRouter } from 'next/navigation'

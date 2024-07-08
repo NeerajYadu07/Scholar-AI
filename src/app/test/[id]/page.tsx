@@ -2,7 +2,7 @@ import { Title2 } from '@/components/atoms/typography'
 import { DisplayDate } from '@/components/molecules/DisplayDate'
 import { Ticker } from '@/components/molecules/Ticker'
 import { Test } from '@/components/template/Test'
-import { trpcServer } from '@/trpc/clients/server'
+import { trpcServer } from '@/trpc/client/server'
 
 export default async function Page({ params }: { params: { id: string } }) {
   const courseId = +params.id

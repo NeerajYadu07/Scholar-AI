@@ -1,5 +1,5 @@
 import { AlertBox } from '@/components/molecules/AlertBox'
-import { trpcServer } from '@/trpc/clients/server'
+import { trpcServer } from '@/trpc/client/server'
 import { redirect } from 'next/navigation'
 
 export default async function Page({

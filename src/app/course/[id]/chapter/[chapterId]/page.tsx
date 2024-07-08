@@ -1,7 +1,7 @@
 import { Title } from '@/components/atoms/typography'
 import { AlertBox } from '@/components/molecules/AlertBox'
 import { AIConversations } from '@/components/organisms/AIConversation'
-import { trpcServer } from '@/trpc/clients/server'
+import { trpcServer } from '@/trpc/client/server'
 import Link from 'next/link'
 
 export default async function Page({

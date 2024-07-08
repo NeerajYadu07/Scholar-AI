@@ -1,6 +1,6 @@
 import { Title2 } from '@/components/atoms/typography'
 import { UserCard } from '@/components/organisms/UserCard'
-import { trpcServer } from '@/trpc/clients/server'
+import { trpcServer } from '@/trpc/client/server'
 
 export default async function Page() {
   const admins = await trpcServer.admins.admins.query()

@@ -1,7 +1,6 @@
+"use client"
 import { cn } from '@/util/styles'
-import { usePathname, useParams } from 'next/navigation'
-import { useEffect, useRef } from 'react'
-import { trpcClient } from '@/trpc/clients/client'
+import { useRef } from 'react'
 import { BaseComponent } from '@/util/types'
 import { UseFormReset } from 'react-hook-form'
 import { ZodSchema } from 'zod'
@@ -22,9 +21,6 @@ export const JsonFileInput = ({
 }: JsonFileInputProps) => {
   const fileInputRef = useRef<HTMLInputElement>(null)
   const { toast } = useToast()
-  
-
- 
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0]
@@ -39,7 +35,10 @@ export const JsonFileInput = ({
             reset(validatedData.data)
           } else {
             reset()
-            toast({ title: 'Data validation failed.', description: validatedData.error.message })
+            toast({
+              title: 'Data validation failed.',
+              description: validatedData.error.message,
+            })
             if (fileInputRef.current) {
               fileInputRef.current.value = ''
             }

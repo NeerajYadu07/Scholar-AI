@@ -1,6 +1,6 @@
 'use client'
 import { useFormAddCredits } from '@/forms/addCredits'
-import { trpcClient } from '@/trpc/clients/client'
+import { trpcClient } from '@/trpc/client/client'
 import { useState } from 'react'
 import { Button } from '../atoms/button'
 import { SimpleDialog } from '../molecules/SimpleDialog'

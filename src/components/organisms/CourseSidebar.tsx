@@ -2,7 +2,7 @@ import { cn } from '@/util/styles'
 import { buttonVariants } from '@/util/styles/variants'
 import { Link } from '../molecules/CustomLink'
 import { Link as Link2 } from '../molecules/CustomLink2'
-import { RouterOutputs } from '@/trpc/clients/types'
+import { RouterOutputs } from '@/trpc/client/types'
 import { CourseType } from '../template/CoursePage'
 
 export const CourseSidebar = ({ course }: { course: CourseType }) => {

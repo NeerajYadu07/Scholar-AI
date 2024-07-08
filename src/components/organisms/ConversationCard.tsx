@@ -1,4 +1,4 @@
-import { RouterOutputs } from '@/trpc/clients/types'
+import { RouterOutputs } from '@/trpc/client/types'
 import Link from 'next/link'
 import { DisplayDate } from '../molecules/DisplayDate'
 

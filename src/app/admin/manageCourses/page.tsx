@@ -1,6 +1,6 @@
 import { Title2 } from '@/components/atoms/typography'
 import { CourseCardSimple } from '@/components/organisms/CourseCardSimple'
-import { trpcServer } from '@/trpc/clients/server'
+import { trpcServer } from '@/trpc/client/server'
 
 export default async function Page() {
   const courses = await trpcServer.courses.courses.query()
